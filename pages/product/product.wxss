@@ -4,6 +4,7 @@
   background-color:#F9F9F9
 }
 .detail-header-box,.detail-bottom-box{
+  width: 100%;
   background-color: #fff;
 }
 .detail-topic-img{

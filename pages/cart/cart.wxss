@@ -5,9 +5,10 @@
     background-color: #fff;
 }
 .cart-box{
-    overflow-x: hidden;
-    margin-bottom: 92rpx;
-    font-size: 28rpx;
+  width: 100%;
+  overflow-x: hidden;
+  margin-bottom: 92rpx;
+  font-size: 28rpx;
 }
 
 .cart-item{

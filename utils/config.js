@@ -2,6 +2,6 @@ class Config{
   constructor(){
 
   }
-}
-Config.restUrl = 'chenzeze.xyz/api/v1/';
+}/////////////fakfaff
+Config.restUrl = 'https://chenzeze.xyz/api/v1/';
 export {Config};

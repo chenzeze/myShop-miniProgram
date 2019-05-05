@@ -32,7 +32,7 @@ Page({
     })
     home.getProductData((data) => {
       that.setData({
-        productArr: data
+        productsArr: data
       })
       callback && callback();
     })
@@ -49,6 +49,6 @@ Page({
     wx.navigateTo({
       url: '../theme/theme?id=' + id + "&name=" + name
     })
-  },
+  }
 
 })

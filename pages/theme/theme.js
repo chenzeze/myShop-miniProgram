@@ -14,10 +14,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.data.titleName = option.name;
-    this.data.id = option.id;
+    this.data.titleName = options.name;
+    this.data.id = options.id;
     wx.setNavigationBarTitle({
-      title: option.name
+      title: options.name
     });
     this._loadData();
   },
