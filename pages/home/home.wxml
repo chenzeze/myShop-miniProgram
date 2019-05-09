@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
 <import src='../tpls/products/products-tpl.wxml'/>
 <view class='container home-container' hidden='{{!loadingHidden}}'>
-  <swiper indicator-dots='true' autoplay='true' class='swiper'>
+  <swiper indicator-dots='true' autoplay='true' class='swiper' circular='true'>
     <block wx:for="{{bannerArr}}">
       <swiper-item class="banner-item" bindtap="onProductsItemTap" data-id="{{item.key_word}}">
         <image class='item-image' src="{{item.img.url}}" mode="aspectFill"></image>
