@@ -10,6 +10,8 @@
 
 ## 项目运行
 
+<img src="./imgs/output/output.gif">
+
 #### 注意：小程序开发需要后台接口需要 https
 
 ```
