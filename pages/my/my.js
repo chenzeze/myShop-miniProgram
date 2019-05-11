@@ -1,7 +1,13 @@
 // pages/my/my.js
-import { Address } from '../../utils/address.js';
-import { Order } from '../order/order-model.js';
-import { My } from '../my/my-model.js';
+import {
+  Address
+} from '../../utils/address.js';
+import {
+  Order
+} from '../order/order-model.js';
+import {
+  My
+} from '../my/my-model.js';
 
 var address = new Address();
 var order = new Order();
@@ -11,6 +17,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     pageIndex: 1,
     isLoadedAll: false,
     loadingHidden: false,
@@ -25,8 +32,13 @@ Page({
     this._loadData();
     this._getAddressInfo();
   },
-
-
+  bindGetUserInfo(e) {
+    console.log(e.detail.userInfo)
+    this.setData({
+      userInfo: e.detail.userInfo,
+      loadingHidden: true
+    });
+  },
 
   /**
    * 生命周期函数--监听页面显示
@@ -41,15 +53,26 @@ Page({
 
   _loadData: function () {
     var that = this;
-    my.getUserInfo((data) => {
-      that.setData({
-        userInfo: data
-      });
-
-    });
-
+    // 查看是否授权
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success(res) {
+              // console.log(res.userInfo)
+              that.setData({
+                userInfo: res.userInfo,
+                loadingHidden:true
+              });
+            }
+          })
+        }
+      }
+    })
+   
     this._getOrders();
-    order.execSetStorageSync(false);  //更新标志位
+    order.execSetStorageSync(false); //更新标志位
   },
 
   /**地址信息**/
@@ -103,12 +126,12 @@ Page({
         loadingHidden: true
       });
       if (data.length > 0) {
-        that.data.orderArr.push.apply(that.data.orderArr, res.data);  //数组合并
+        that.data.orderArr.push.apply(that.data.orderArr, res.data); //数组合并
         that.setData({
           orderArr: that.data.orderArr
         });
       } else {
-        that.data.isLoadedAll = true;  //已经全部加载完毕
+        that.data.isLoadedAll = true; //已经全部加载完毕
         that.data.pageIndex = 1;
       }
       callback && callback();
@@ -166,12 +189,12 @@ Page({
    */
   onPullDownRefresh: function () {
     var that = this;
-    this.data.orderArr = [];  //订单初始化
+    this.data.orderArr = []; //订单初始化
     this._getOrders(() => {
-      that.data.isLoadedAll = false;  //是否加载完全
+      that.data.isLoadedAll = false; //是否加载完全
       that.data.pageIndex = 1;
       wx.stopPullDownRefresh();
-      order.execSetStorageSync(false);  //更新标志位
+      order.execSetStorageSync(false); //更新标志位
     });
   },
 
@@ -186,12 +209,12 @@ Page({
   },
 
   /*
-      * 提示窗口
-      * params:
-      * title - {string}标题
-      * content - {string}内容
-      * flag - {bool}是否跳转到 "我的页面"
-      */
+   * 提示窗口
+   * params:
+   * title - {string}标题
+   * content - {string}内容
+   * flag - {bool}是否跳转到 "我的页面"
+   */
   showTips: function (title, content) {
     wx.showModal({
       title: title,

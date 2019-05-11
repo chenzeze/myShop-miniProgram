@@ -6,7 +6,8 @@
     "pages/cart/cart",
     "pages/category/category",
     "pages/my/my",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/tool/tool"
   ],
   "window": {
     "navigationBarTitleText": "",

@@ -1,0 +1,9 @@
+<!--pages/tool/tool.wxml-->
+<button type='primary' style='margin-bottom:20px;margin-top:30px;' bindtap="getToken">申请令牌</button>
+<button type='primary' style='margin-bottom:20px;margin-top:30px;' bindtap="getSuperToken">申请Super权限令牌</button>
+<button type='warn' style='margin-bottom:20px;margin-top:30px;' bindtap="pay">支付</button>
+<button type='primary' style='margin-bottom:20px;margin-top:30px;' bindtap="delivery">发货</button>
+<form bindsubmit='formID' report-submit='true'>
+    <button form-type='submit' type='primary' style='margin-bottom:20px;margin-top:30px'>表达那ID</button>
+</form>
+<button type='warn' style='margin-bottom:20px;margin-top:30px;' bindtap="checkSession">检查登陆态</button>

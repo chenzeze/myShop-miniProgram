@@ -20,16 +20,20 @@
 .order-basic-info{
     border-bottom: 1rpx solid #E9E9E9;
     display: flex;
+    width: 100%;
+    padding: 20rpx;
 }
 
 .order-time-no{
     flex: 1;
+    padding-left: 20rpx;
 }
 .order-status{
     display: flex;
     flex-basis: 110rpx;
     align-items: center;
     justify-content: flex-end;
+    padding-right: 20rpx
 }
 .order-time-no view:first-child{
    margin-bottom:15rpx ;
@@ -47,6 +51,7 @@
 
 .contact-box{
     display: flex;
+    padding: 0 20rpx;
 }
 .contact-box>view:first-child{
     flex: 1;
