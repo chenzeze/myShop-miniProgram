@@ -2,15 +2,13 @@
 
 该项目为用微信小程序端实现的电商平台类似淘宝店铺，项目使用 es6 类进行面向对象开发，封装公共模板，实现模块化开发，大大减少重复代码。
 
-**注：项目还处于完善阶段，请保持关注哟~**
+**注：项目不断完善中，请保持关注哟~**
 
 ## 技术栈
 
 微信小程序
 
 ## 项目运行
-
-<img src="./imgs/output/output.gif">
 
 #### 注意：小程序开发需要后台接口需要 https
 
@@ -38,6 +36,8 @@ git clone https://github.com/chenzeze/myShop-miniProgram.git
 > 如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
 # 效果演示
+
+<img src="./imgs/output/output.gif">
 
 # 目标功能
 
