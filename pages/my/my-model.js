@@ -1,4 +1,6 @@
-import { Base } from '../../utils/base.js'
+import {
+  Base
+} from '../../utils/base.js'
 
 class My extends Base {
   constructor() {
@@ -35,20 +37,23 @@ class My extends Base {
   /*更新用户信息到服务器*/
   _updateUserInfo(res) {
     var nickName = res.nickName;
-    delete res.avatarUrl;  //将昵称去除
-    delete res.nickName;  //将昵称去除
+    delete res.avatarUrl; //将昵称去除
+    delete res.nickName; //将昵称去除
     var allParams = {
       url: 'user/wx_info',
-      data: { nickname: nickName, extend: JSON.stringify(res) },
+      data: {
+        nickname: nickName,
+        extend: JSON.stringify(res)
+      },
       type: 'post',
-      sCallback: function (data) {
-      }
+      sCallback: function (data) {}
     };
     this.request(allParams);
-
   }
 }
 
 
 
-export { My }
+export {
+  My
+}

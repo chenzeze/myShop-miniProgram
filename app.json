@@ -18,8 +18,7 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
         "iconPath": "imgs/toolbar/home.png",
         "selectedIconPath": "imgs/toolbar/home@selected.png",

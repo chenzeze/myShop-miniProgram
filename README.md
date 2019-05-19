@@ -37,7 +37,33 @@ git clone https://github.com/chenzeze/myShop-miniProgram.git
 
 # 效果演示
 
-<img src="./imgs/output/output.gif">
+### 总体效果
+
+<img src="./imgs/output/output.gif" width="365" height="619"/>
+
+### 首页
+
+<img src="./imgs/output/m_output.png" width="365" height="619"/><img src="./imgs/output/miniHome.gif" width="365" height="619"/>
+
+### 主题
+
+<img src="./imgs/output/m_theme.png" width="365" height="619"/>
+
+### 商品详情
+
+<img src="./imgs/output/m_pro.png" width="365" height="619"/><img src="./imgs/output/miniCart.gif" width="365" height="619"/>
+
+### 购物车
+
+<img src="./imgs/output/m_cart.png" width="365" height="619"/><img src="./imgs/output/miniCarta.gif" width="365" height="619"/>
+
+### 订单详情（从"购物车"进入/从"我的"进入）
+
+<img src="./imgs/output/m_or.png" width="365" height="619"/><img src="./imgs/output/m_ordeta.png" width="365" height="619"/><img src="./imgs/output/miniOrder.gif" width="365" height="619"/>
+
+### 我的
+
+<img src="./imgs/output/m_my.png" width="365" height="619"/><img src="./imgs/output/miniMy.gif" width="365" height="619"/>
 
 # 目标功能
 
