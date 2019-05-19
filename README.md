@@ -63,7 +63,7 @@ git clone https://github.com/chenzeze/myShop-miniProgram.git
 
 ### 我的
 
-<img src="./imgs/output/m_my.png" width="365" height="619"/><img src="./imgs/output/miniMy.gif" width="365" height="619"/>
+<img src="./imgs/output/m_my.png" width="365" height="619"/><img src="./imgs/output/miniMyN.gif" width="365" height="619"/>
 
 # 目标功能
 
